@@ -9,5 +9,8 @@
         <module name="user_login_ssm" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="user_login_ssm" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

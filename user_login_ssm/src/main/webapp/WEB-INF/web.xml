@@ -5,6 +5,17 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
 
+  <!-- 配置Spring的监听器-->
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  <!-- 配置加载类路径的配置文件-->
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:applicationContext.xml</param-value>
+  </context-param>
+
+
   <!-- 配置前端控制器：服务器启动必须加载，需要加载springmvc.xml配置文件-->
   <servlet>
     <servlet-name>dispatcherServlet</servlet-name>
