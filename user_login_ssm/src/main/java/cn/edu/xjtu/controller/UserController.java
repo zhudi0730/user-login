@@ -68,9 +68,10 @@ public class UserController {
         if (userService.findUserByUsername(user.getUsername()) != null) {
             //数据库中已存在该用户名
             response.sendRedirect(request.getContextPath() + "/user/registerFail");
+        } else {//否则保存该用户
+            userService.saveUser(user);
+            response.sendRedirect(request.getContextPath() + "/index.jsp");
         }
-        userService.saveUser(user);
-        response.sendRedirect(request.getContextPath() + "/index.jsp");
     }
 
     @RequestMapping("/registerFail")
